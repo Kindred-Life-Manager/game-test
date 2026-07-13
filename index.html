@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rivais da Rodovia</title>
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero">
+        <div>
+          <p class="eyebrow">Protótipo jogável</p>
+          <h1>Rivais da Rodovia</h1>
+          <p class="subtitle">
+            Gerencie sua pista, compre upgrades e faça seus carros escolherem a sua rodovia em vez da do rival.
+            Quem completar 3 objetivos primeiro vence.
+          </p>
+        </div>
+        <div class="scoreboard" aria-live="polite">
+          <div><span id="round">Rodada 1</span><small>fase atual</small></div>
+          <div><span id="cash">$120</span><small>caixa</small></div>
+          <div><span id="fans">0/3</span><small>objetivos</small></div>
+        </div>
+      </section>
+
+      <section class="board">
+        <article class="player-panel">
+          <header>
+            <h2>Sua pista</h2>
+            <strong id="playerPower">Atratividade 0</strong>
+          </header>
+          <div class="road player-road" id="playerRoad"></div>
+        </article>
+
+        <article class="player-panel rival">
+          <header>
+            <h2>Pista rival</h2>
+            <strong id="rivalPower">Atratividade 0</strong>
+          </header>
+          <div class="road rival-road" id="rivalRoad"></div>
+        </article>
+      </section>
+
+      <section class="shop" aria-label="Loja de decisões">
+        <div class="shop-header">
+          <h2>Decisões da rodada</h2>
+          <button id="simulateBtn">Simular tráfego</button>
+        </div>
+        <div class="cards" id="upgradeCards"></div>
+      </section>
+
+      <section class="objectives">
+        <h2>Objetivos</h2>
+        <ul id="objectivesList"></ul>
+      </section>
+
+      <section class="log">
+        <h2>Diário da corrida</h2>
+        <ol id="eventLog"></ol>
+      </section>
+    </main>
+    <script type="module" src="src/game.js"></script>
+  </body>
+</html>
