@@ -1,0 +1,13 @@
+{
+  "name": "road-rivals-prototype",
+  "version": "1.0.0",
+  "description": "Protótipo de PvP de gerenciamento com pistas e carros autônomos.",
+  "type": "module",
+  "scripts": {
+    "start": "vite --host 0.0.0.0",
+    "test": "node --check src/game.js"
+  },
+  "devDependencies": {
+    "vite": "latest"
+  }
+}
